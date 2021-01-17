@@ -1,0 +1,198 @@
+<!--此程式碼參照W3SCHOOL 與 陳鍾誠老師上課時POS系統  並進行部分修改 我能大部分理解此程式碼  
+    瀏覽頁面位於README裡
+    "更多飲料店===>>>>前往搜尋頁面
+    "投訴"========>>>>前往類似blog產生的投訴頁面 
+    "Log in "=====>>>前往本學期第二次作業的修改版,無真正log in 
+    "搜尋框"======>>>有形無體
+    
+    以下有更詳細的註解-->  
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--載入icon的library-->
+<link rel="stylesheet" href="main.css"/>
+
+</head>
+
+<style>
+
+
+
+.navbar {/* navbar的排版設計 */
+    background-color: rgb(63, 188, 226);
+    overflow: hidden;
+}
+.navbar a{  /* navbar裡字體、排版 */
+    float: left;
+    font-size: 16px;
+    color: antiquewhite;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.navbar a:hover{ /*滑鼠移過去產生顏色變化*/
+    background-color: chartreuse;
+}
+.navbar input[type=text]{
+    float:left;
+    padding: 8px 8px;
+    border: none;
+    margin-top:7px;
+    
+}
+.navbar .search-container button{/* 搜尋按鈕 */
+    float: left;;
+    padding: 8px 8px;
+    margin-top:7px;
+    border: none;
+    background-color: coral;
+    cursor: pointer;
+}
+.navbar.search-container button:hover{ /* 滑鼠移動經過-->顏色改變*/
+    background-color: rgb(31, 192, 31);
+
+}
+@media screen and (max-width: 550px) {/*Responsive-當視窗螢幕小於550px時,navbar-a的排版改為一直排*/
+  .navbar a,.navbar input[type=text],.navbar.search-container button {
+    float: none;
+    display: block;
+    text-align: center;
+    
+    
+  }
+  .navbar.search-container{
+      float: none;
+  }
+
+/*----------------圖片功能圖片功能圖片功能圖片功能圖片功能圖片功能---------------*/
+  }
+  .container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 50%;
+  height: 60%;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  position: relative;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.img{
+    width: 600px;
+    height: 600px;
+}
+</style>
+
+
+
+
+<body onload="Shop.start()">
+    
+    
+    <header>
+        <div class="navbar">
+            <a onclick="Ui.openNav()" style="cursor: pointer;">&#9776;</a>
+            <a href="#Shop" id="menuShopName"><i class="fa fa-fw fa-home"></i> Home</a>
+          
+            <a href="https://reurl.cc/Mv5k4p"><i class="fa fa-fw fa-search"></i> 更多飲料店</a>
+            <a href="No.html"><i class="fa fa-fw fa-trash"></i>投訴</a>
+            <a href="form.html"><i class="fa fa-fw fa-user"></i> Login</a>
+           
+           
+            
+            <div class="search-container">
+                <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+    
+        </div>
+       
+    </header>
+
+    <div class="img"><!-- 加入圖片,滑鼠經過有介紹  -->
+        <div class="container">
+            <img src="https://images.pexels.com/photos/109275/pexels-photo-109275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="juice" class="image" style="width:25%" height="25%">
+            <div class="middle">
+             <!-- 圖片來自Pexels-Chevanon Photography為免費授權使用 -->
+             <div class="text">柳橙汁-新鮮現打</div>   
+            </div>
+            </div>
+    
+          <div class="container">
+            <img src="https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="coffee" class="image" style="width:25%" height="25%">
+           
+            <div class="middle">
+            <div class="text">咖啡-精選研磨</div>   
+            </div>
+          </div>
+    
+          <div class="container">
+            <img src="https://images.pexels.com/photos/4667193/pexels-photo-4667193.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="water" class="image" style="width:25%" height="25%">
+            <!-- 圖片來自Pexels-cottonbro為免費授權使用 -->
+            <div class="middle">
+            <div class="text">冰水-精華濃縮</div>   
+            </div>
+          </div>
+    </div>
+        
+    
+    
+
+    <main>
+  <div id="main" class="table" style="text-align:center">
+  </div>
+</main>
+
+
+<!-- 載入檔案裡的js -->
+    <script src="Shop.js"></script>
+    <script src="Pos2.js"></script>
+    <script src="Report.js"></script>
+    <script src="Setting.js"></script>
+    <script src="Lib.js"></script>
+    <script src="Ui.js"></script>
+</body>
+
+
+
+
+
+</html>
+
+
+
+
+
+
+

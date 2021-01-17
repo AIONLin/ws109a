@@ -1,0 +1,220 @@
+/*  此程式碼參照W3SCHOOL與陳鍾誠老師 並進行部分修改 我能完全理解此程式碼        */
+
+
+
+input:disabled, button:disabled {
+  background: #aaa;
+  color: #555;
+}
+
+.big {
+  padding: 10px 15px;
+}
+
+/* main : 參考: https://codepen.io/legeoffrey/pen/mydrVo */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+main {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  padding: 10px;
+}
+
+.wide {
+  width: 100%;
+}
+
+.text-right {
+  text-align:right;
+}
+
+.number {
+  text-align:right;
+}
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.right {
+  float: right;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid #333;
+  border-collapse: collapse;
+}
+
+div {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+th, td {
+  border: 1px solid #333;
+  padding: 3px 6px;
+}
+
+th {
+  background-color: #333;
+  color: #ddd;
+}
+
+textarea, input, select {
+  border-radius: 2px;
+  box-shadow: none;
+  padding: 5px;
+  border:1px solid #888;
+}
+
+textarea {
+  width: 100%;
+  min-height: 150px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  border: none; 
+  color: white; 
+  padding: 5px 10px; 
+  cursor: pointer; 
+  border-radius: 2px;
+  background-color: #339966;
+}
+
+input[type=number] {
+  width: 5em;
+}
+
+input[type=text] {
+  width: 20em;
+}
+
+.strong {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+footer {
+  background-color: brown;
+}
+
+@media screen and (max-height: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+/********************************     將html的style移過來   *************************************************************************/
+
+.navbar {/* navbar的排版設計 */
+
+  background-color: rgb(63, 188, 226);
+  overflow: hidden;
+}
+.navbar a{  /* navbar裡字體、排版 */
+
+  float: left;
+  font-size: 16px;
+  color: antiquewhite;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbar a:hover{ /*滑鼠移過去產生顏色變化*/
+
+  background-color: chartreuse;
+}
+.navbar input[type=text]{
+float:left;
+padding: 8px 8px;
+border: none;
+margin-top:7px;
+
+}
+.navbar .search-container button{/* 搜尋按鈕 */
+float: left;;
+padding: 8px 8px;
+margin-top:7px;
+border: none;
+background-color: coral;
+cursor: pointer;
+}
+.navbar.search-container button:hover{ /* 滑鼠移動經過-->顏色改變*/
+background-color: rgb(31, 192, 31);
+
+}
+@media screen and (max-width: 550px) {/*Responsive-當視窗螢幕小於550px時,navbar-a的排版改為一直排*/
+.navbar a,.navbar input[type=text],.navbar.search-container button {
+float: none;
+display: block;
+text-align: center;
+
+
+}
+.navbar.search-container{
+  float: none;
+}
+
+/*----------------圖片功能圖片功能圖片功能圖片功能圖片功能圖片功能---------------*/
+}
+.container {
+ position: relative;
+ width: 100%;
+}
+
+.image {
+opacity: 1;
+display: block;
+width: 25%;
+height: 25%;
+transition: .5s ease;
+backface-visibility: hidden;
+}
+
+.middle {
+transition: .5s ease;
+opacity: 0;
+position: absolute;
+top: 25%;
+left: 25%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+text-align: center;
+}
+
+.container:hover .image {
+
+ opacity: 0.3;
+}
+
+.container:hover .middle {
+ opacity: 1;
+
+}
+
+.text {
+
+ position: relative;
+ background-color: #4CAF50;
+ color: white;
+ font-size: 16px;
+ padding: 16px 32px;
+}
+.img{
+width: 400px;
+height: 400px;
+}

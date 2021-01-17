@@ -1,0 +1,99 @@
+<!-- 為本學期第二次作業的表單進行修改 -->
+
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!--載入icon的library-->
+  <style>
+    .navbar{
+      font-size: 25px;
+    }
+    body{/*圖片來自Pexels網站-Aphiwat chuangchoem 為免費授權使用 */
+      background-image: url(https://reurl.cc/V6O5ZA);
+      
+    }
+  </style>
+  <head>
+    <div style="background-color:lightskyblue ;">
+          
+    <table >
+     <h1 style="text-align: center;font-family: 標楷體;color: #117780; "> 登入進行更完整服務</h1>
+    </table>
+  
+  </div>
+  </head>
+
+  
+  <body >
+    <div class="navbar">
+      <a href="Web.html"><i class="fa fa-fw fa-home"></i>Home</a>
+  </div>
+    <h2 style="text-align: center;">現在完成還有折價券!</h2>
+    
+
+  <table  style="background-color: lightpink ;margin-left: 570px; margin: auto;" ><!--YOOOOOOOOOOOOOOOOOOOO!!!再修-->
+    <tr>
+      <td  valign="middle">
+    
+ 
+  <form    style=" text-align:left;background-color: mediumaquamarine;"> <!--action="/action_page.php"-->
+    <fieldset  >
+      <legend >Log in </legend>
+      <label  for="Name">使用者名稱(Nickname):</label><br>
+      <input type="text" id="Name"Name="Name" value="哈ㄇㄟ二齒"> <br><br>
+     
+      <label for="Mail">電子信箱:</label><br>
+      <input type="text" id="Mail"Mail="Mail" value="abc123@gmail.com"><br><br>
+
+      
+      <label for="gender" >Gender:</label><br>
+
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+  
+      <input type="radio" id="Female" name="gender" value="Female">
+      <label for="Female">Female</label><br>
+  
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label><br><br>
+
+      <label for="cars">年齡:</label><br>
+      <select id="cars" name="cars">
+          <option value="age1">15以下</option>
+          <option value="age2">15-25</option>
+          <option value="age3">26-40</option>
+          <option value="age4">41-65</option>
+          <option value="age5">65以上</option>
+         
+      </select><br><br><br>
+
+      <label for="considers">為甚麼喜歡本店:</label><br>
+      <input type="checkbox" id="factors1" name="factors1" value="price">
+      <label for="factors1">料好錢少</label><br>
+      <input type="checkbox" id="factors2" name="factors2" value="people">
+      <label for="factors2">服務周到</label><br>
+      <input type="checkbox" id="factors3" name="factors3" value="other">
+      <label for="factors3">其他</label><br><br>
+
+
+
+      
+      <label for="message">Message box:</label><br>
+      <textarea name="message" style="width:100px ; height:60px";>想要說些甚麼?</textarea><br><br>
+
+      <label for="fillingdate">Filling Date:</label>
+  <input type="date" id="fillingdate" name="fillingdate">
+      
+      
+    </fieldset>
+
+    <input  style="text-align: center;" type="reset"><br>
+    <input  type="submit"onclick="alert('Thank you!')" value="Submit" >
+
+  </form>
+</td>
+</tr>
+</table>
+</body>
+
+
+</html>
