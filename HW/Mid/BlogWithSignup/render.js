@@ -115,7 +115,7 @@ export function list(posts, user) {
   let content = `
   <h1>Posts</h1>
   <p>${(user==null)?'<a href="/login">Login</a> to Create a Post!':'Welcome '+user.username+', You may <a href="/post/new">Create a Post</a> or <a href="/logout">Logout</a> !'}</p>
-  <p>There are <strong>${posts.length}</strong> posts!</p>
+  <p>There are <strong>${posts.length}</strong> posts!</p>  
   <ul id="posts">
     ${list.join('\n')}
   </ul>
